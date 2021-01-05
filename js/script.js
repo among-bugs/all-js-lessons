@@ -182,3 +182,4 @@ for (let i = 0; i < 3; i++) {
    // }
 }
 console.info(`last change, ${personals[0].name}`);
+console.info(`${personals[1].name}, is debil!`);
