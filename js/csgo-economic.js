@@ -164,27 +164,25 @@ let pistolsPrices = [],
 
 for (let index = 0; index < weapons.pistols.length; index++) {
     let nameOfPistols = weapons.pistols[index].name;
-    let priceOfPistols = weapons.pistols[index].Price[0] +
-                weapons.pistols[index].Price[1];
+    let priceOfPistols = weapons.pistols[index].Price[0].toString +
+        weapons.pistols[index].Price[1].toString;
 
-    if (weapons.pistols[index].Price[0] >= 300)
-    {
-        pistolsPrices[index] = 
-        {
+    if (weapons.pistols[index].Price[0] >= 300 &&
+        weapons.pistols[index].Price[1] == currency.USD) {
+        pistolsPrices[index] = {
             name: nameOfPistols,
             price: priceOfPistols,
             over100$: true
         };
     } else {
-        pistolsPrices[index] = 
-        {
+        pistolsPrices[index] = {
             name: nameOfPistols,
             price: priceOfPistols,
             over100$: false
         };
     }
-
     if (pistolsPrices[index].over100$ == true) {
-        over100PistolsLists += `, ${pistolsPrices[index].name}`; 
+        over100PistolsLists += `${pistolsPrices[index].name}, `;
     }
 }
+console.log(over100PistolsLists);
