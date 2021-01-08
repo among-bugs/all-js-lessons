@@ -164,8 +164,8 @@ let pistolsPrices = [],
 
 for (let index = 0; index < weapons.pistols.length; index++) {
     let nameOfPistols = weapons.pistols[index].name;
-    let priceOfPistols = weapons.pistols[index].Price[0].toString +
-        weapons.pistols[index].Price[1].toString;
+    let priceOfPistols = weapons.pistols[index].Price[0] +
+        weapons.pistols[index].Price[1];
 
     if (weapons.pistols[index].Price[0] >= 300 &&
         weapons.pistols[index].Price[1] == currency.USD) {
