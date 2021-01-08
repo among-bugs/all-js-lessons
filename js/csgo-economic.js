@@ -1,188 +1,31 @@
 "use strict";
 
-const currency = {
-    USD: "$"
-};
-console.log(currency.USD);
-const weapons = {
-    closeCombat: {
-
-    },
-    pistols: [{
-            name: "P2000",
-            Price: [200, currency.USD],
-            "Magazine capacity": "13/52",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 35
-        },
-        {
-            name: "Glock-18",
-            Price: [200, currency.USD],
-            "Magazine capacity": "20/120",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 30
-        },
-        {
-            name: "USP-S",
-            Price: [200, currency.USD],
-            "Magazine capacity": "12/24",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 35
-        },
-        {
-            name: "Dual Berettes",
-            Price: [400, currency.USD],
-            "Magazine capacity": "30/120",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 38
-
-        },
-        {
-            name: "P250",
-            Price: [300, currency.USD],
-            "Magazine capacity": "13/26",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [300, currency.USD]
-            },
-            "Damage": 38
-
-        },
-        {
-            name: "Five SeveN",
-            Price: [500, currency.USD],
-            "Magazine capacity": "20/100",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 32
-        },
-        {
-            name: "Tec-9",
-            Price: [500, currency.USD],
-            "Magazine capacity": "18,(24),{32}/90",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 33
-
-        },
-        {
-            name: "CZ75Auto",
-            Price: [500, currency.USD],
-            "Magazine capacity": "12/12",
-            "Kill reward": {
-                "competitive mode": [100, currency.USD],
-                "normal mode": [50, currency.USD]
-            },
-            "Damage": 33
-
-        },
-        {
-            name: "Desert Eagle",
-            Price: [700, currency.USD],
-            "Magazine capacity": "7/35",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 73
-        },
-        {
-            name: "Revolver R8",
-            Price: [600, currency.USD],
-            "Magazine capacity": "8/8",
-            "Kill reward": {
-                "competitive mode": [300, currency.USD],
-                "normal mode": [150, currency.USD]
-            },
-            "Damage": 86
-        }
-    ]
-};
-//     },
-// shotguns: {
-//     "Nova": "",
-//     "XM1014": "",
-//     "MAG-7": "",
-//     "Sawed-off": ""
-// },
-// submachineGuns: {
-//     "MAC-10": "",
-//     "MP9": "",
-//     "MP7": "",
-//     "MP5SD": "",
-//     "UMP-45": "",
-//     "P90": "",
-//     "PP-19": ""
-// },
-// assaultRifles: {
-//     "FAMAS": "",
-//     "Galil AR": "",
-//     "M4A1-S": "",
-//     "M4A4": "",
-//     "AK-47": "",
-//     "AUG": "",
-//     "SG 553": ""
-// },
-// sniperRifles: {
-//     "SSG 08": "",
-//     "AWP": "",
-//     "SCAR-20": "",
-//     "G3SG1": ""
-// },
-// machineGuns: {
-//     "M249": "",
-//     "Negev": ""
-// },
-// grenades: {
-//     "Frag grenade": "",
-//     "Light grenade": "",
-//     "Smoke grenade": "",
-//     "Incendiary grenade": "",
-//     "Molotov cocktail": "",
-//     "Decoil": ""
-// }
-
-
 let pistolsPrices = [],
-    over100PistolsLists = [];
+    over100PistolsLists = [],
+    modifiedWeaponsDetails = [],
+    AllmodifiedWeapons = [];
 
-for (let index = 0; index < weapons.pistols.length; index++) {
-    let nameOfPistols = weapons.pistols[index].name;
-    let priceOfPistols = weapons.pistols[index].Price[0] +
-        weapons.pistols[index].Price[1];
+const examples = [
+    "pistols",
+    "shotguns",
+    "submachineGuns",
+    "assaultRifles",
+    "sniperRifles",
+    "machineGuns",
+    "grenades"
+];
+let InModifiedWeaponsDetails = [];
+for (let indx = 0; indx < weapons.length; indx++) {
 
-    if (weapons.pistols[index].Price[0] >= 300 &&
-        weapons.pistols[index].Price[1] == currency.USD) {
-        pistolsPrices[index] = {
-            name: nameOfPistols,
-            price: priceOfPistols,
-            over100$: true
-        };
-    } else {
-        pistolsPrices[index] = {
-            name: nameOfPistols,
-            price: priceOfPistols,
-            over100$: false
-        };
+    let Info = [];
+
+    for (let indInn = 0; indInn < weapons[indx].length; indInn++) {
+        Info.push(`weapon: ${weapons[indx][indInn].name} >>> price:${
+            weapons[indx][indInn].Price[0] + currency.USD}`);
     }
-    if (pistolsPrices[index].over100$ == true) {
-        over100PistolsLists += `${pistolsPrices[index].name}, `;
-    }
-}
-console.log(over100PistolsLists);
+
+    InModifiedWeaponsDetails.push({
+        category: examples[indx],
+        information: Info
+    });
+};
