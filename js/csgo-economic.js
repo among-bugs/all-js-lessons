@@ -22,8 +22,7 @@ for (let indx = 0; indx < weapons.length; indx++) {
         usingInd = weapons[indx][indInn];
         Info.push({
             name: usingInd.name,
-            price: usingInd.Price[0] +
-                currency.USD,
+            price: usingInd.Price[0],
             magazineCapacity: usingInd.MagazineCapacity,
             killReward: {
                 competitiveMode: usingInd.KillReward.CompetitiveMode[0] + curr,
@@ -37,3 +36,18 @@ for (let indx = 0; indx < weapons.length; indx++) {
         information: Info
     });
 }
+
+const startMoney = 16000;
+let currentMoney = startMoney;
+let selectionWeapon = (InModifiedWeaponsDetails[0].information[0]);
+currentMoney -= selectionWeapon.price;
+
+let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
+
+const curr$ = currency.USD;
+
+startMoneyInfo = (`round start money: ${startMoney + curr$}`);
+selectionWeaponInfo = (`buy weapon: ${selectionWeapon.name}`);
+currentMoneyInfo = (`current money: ${currentMoney + curr$}`);
+
+let round = (`${startMoneyInfo} ${selectionWeaponInfo} ${currentMoneyInfo}`);
