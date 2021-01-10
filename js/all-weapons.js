@@ -3,6 +3,12 @@
 const currency = {
     USD: "$"
 };
+
+const Availabilities = {
+    t: "terrorists",
+    ct: "counter terrorists"
+};
+
 console.log(currency.USD);
 let weapons = [
     [
@@ -14,7 +20,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 35
+                "Damage": 35,
+                "Availability": Availabilities.ct
             },
             {
                 name: "Glock-18",
@@ -24,7 +31,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 30
+                "Damage": 30,
+                "Availability": Availabilities.t
             },
             {
                 name: "USP-S",
@@ -34,7 +42,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 35
+                "Damage": 35,
+                "Availability": Availabilities.ct
             },
             {
                 name: "Dual Berettes",
@@ -44,7 +53,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 38
+                "Damage": 38,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
 
             },
             {
