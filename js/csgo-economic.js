@@ -18,8 +18,10 @@ for (let indx = 0; indx < weapons.length; indx++) {
     for (let indInn = 0; indInn < weapons[indx].length; indInn++) {
         // Info.push(`weapon: ${weapons[indx][indInn].name} >>> price:${
         //     weapons[indx][indInn].Price[0] + currency.USD}`);
-        let usingInd = [], curr = currency.USD;
+        let usingInd = [],
+            curr = currency.USD;
         usingInd = weapons[indx][indInn];
+        
         Info.push({
             name: usingInd.name,
             price: usingInd.Price[0],
@@ -28,19 +30,27 @@ for (let indx = 0; indx < weapons.length; indx++) {
                 competitiveMode: usingInd.KillReward.CompetitiveMode[0] + curr,
                 normalMode: weapons[indx][indInn].KillReward.NormalMode[0] + curr
             },
-            damage: usingInd.Damage
+            damage: usingInd.Damage,
+            availability: usingInd.
         });
     }
     InModifiedWeaponsDetails.push({
         category: examples[indx],
-        information: Info
+        weapon: Info
     });
+}
+
+let allWeaponsCategory = [];
+
+for(let ind = 0; ind < examples.length; ind++){
+    allWeaponsCategory.push([examples[ind], InModifiedWeaponsDetails[ind].weapon]);
 }
 
 const startMoney = 16000;
 let currentMoney = startMoney;
-let selectionWeapon = (InModifiedWeaponsDetails[0].information[0]);
+let selectionWeapon = (InModifiedWeaponsDetails[0].weapon[0]);
 currentMoney -= selectionWeapon.price;
+
 
 let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
 
