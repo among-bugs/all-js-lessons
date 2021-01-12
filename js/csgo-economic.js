@@ -50,16 +50,24 @@ let onlyCounterTerroristsWeapons = [],
     onlyTerroristsWeapons = [],
     forBothTeamsWeapons = [];
 
+const sec = 1;
+const curr$ = currency.USD;
+
 for (let ind = 0; ind < allWeaponsCategory.length; ind++) {
 
-    for (let indIn = 0; indIn < allWeaponsCategory[ind][1].length; indIn++) {
+    for (let indIn = 0; indIn < allWeaponsCategory[ind][sec].length; indIn++) {
 
-        if (allWeaponsCategory[ind][1][indIn].availability == Availabilities.ct) {
-            onlyCounterTerroristsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
-        } else if (allWeaponsCategory[ind][1][indIn].availability == Availabilities.t) {
-            onlyTerroristsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
+        let selectedWeapons = allWeaponsCategory[ind][sec][indIn];
+
+        let theseNames = selectedWeapons.name,
+            thesePrices = selectedWeapons.price + curr$;
+
+        if (selectedWeapons.availability == Availabilities.ct) {
+            onlyCounterTerroristsWeapons.push(`name: ${theseNames}  price: ${thesePrices}`);
+        } else if (selectedWeapons.availability == Availabilities.t) {
+            onlyTerroristsWeapons.push(`name: ${theseNames}  price: ${thesePrices}`);
         } else {
-            forBothTeamsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
+            forBothTeamsWeapons.push(`name: ${theseNames}  price: ${thesePrices}`);
         }
 
     }
@@ -70,7 +78,6 @@ const startMoney = 16000;
 let currentMoney = startMoney;
 let selectionWeapon = (InModifiedWeaponsDetails[0].weapon[0]);
 currentMoney -= selectionWeapon.price;
-const curr$ = currency.USD;
 
 let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
 
