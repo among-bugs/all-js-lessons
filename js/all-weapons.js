@@ -65,7 +65,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 38
+                "Damage": 38,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
 
             },
             {
@@ -76,7 +77,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 32
+                "Damage": 32,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "Tec-9",
@@ -86,7 +88,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 33
+                "Damage": 33,
+                "Availability": `${Availabilities.t}`
 
             },
             {
@@ -97,7 +100,8 @@ let weapons = [
                     "CompetitiveMode": [100, currency.USD],
                     "NormalMode": [50, currency.USD]
                 },
-                "Damage": 33
+                "Damage": 33,
+                "Availability": `${Availabilities.ct}`
 
             },
             {
@@ -108,7 +112,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 73
+                "Damage": 73,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "Revolver R8",
@@ -118,7 +123,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 86
+                "Damage": 86,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             }
         
     ],
@@ -131,7 +137,8 @@ let weapons = [
                     "CompetitiveMode": [900, currency.USD],
                     "NormalMode": [450, currency.USD]
                 },
-                "Damage": 234
+                "Damage": 234,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "XM1014",
@@ -141,7 +148,8 @@ let weapons = [
                     "CompetitiveMode": [900, currency.USD],
                     "NormalMode": [450, currency.USD]
                 },
-                "Damage": 120
+                "Damage": 120,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "MAG-7",
@@ -151,7 +159,8 @@ let weapons = [
                     "CompetitiveMode": [900, currency.USD],
                     "NormalMode": [450, currency.USD]
                 },
-                "Damage": 240
+                "Damage": 240,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "Sawed-off",
@@ -161,7 +170,8 @@ let weapons = [
                     "CompetitiveMode": [900, currency.USD],
                     "NormalMode": [450, currency.USD]
                 },
-                "Damage": 256
+                "Damage": 256,
+                "Availability": `${Availabilities.t}`
             }
         
     ],
@@ -174,7 +184,8 @@ let weapons = [
                     "CompetitiveMode": [600, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 29
+                "Damage": 29,
+                "Availability": `${Availabilities.t}`
             },
             {
                 name: "MP9",
@@ -184,7 +195,8 @@ let weapons = [
                     "CompetitiveMode": [600, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 26
+                "Damage": 26,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "MP7",
@@ -194,7 +206,8 @@ let weapons = [
                     "CompetitiveMode": [600, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 29
+                "Damage": 29,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "MP5SD",
@@ -204,7 +217,8 @@ let weapons = [
                     "CompetitiveMode": [600, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 27
+                "Damage": 27,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "UMP-45",
@@ -214,7 +228,8 @@ let weapons = [
                     "CompetitiveMode": [null, currency.USD],
                     "NormalMode": [null, currency.USD]
                 },
-                "Damage": 35
+                "Damage": 35,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "P90",
@@ -224,7 +239,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 26
+                "Damage": 26,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "PP-19",
@@ -234,7 +250,8 @@ let weapons = [
                     "CompetitiveMode": [600, currency.USD],
                     "NormalMode": [300, currency.USD]
                 },
-                "Damage": 27
+                "Damage": 27,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             }
         
     ],
@@ -247,7 +264,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 30
+                "Damage": 30,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "Galil AR",
@@ -257,7 +275,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 30
+                "Damage": 30,
+                "Availability": `${Availabilities.t}`
             },
             {
                 name: "M4A1-S",
@@ -267,7 +286,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 33
+                "Damage": 33,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "M4A4",
@@ -277,7 +297,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 33
+                "Damage": 33,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "AK-47",
@@ -287,7 +308,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 36
+                "Damage": 36,
+                "Availability": `${Availabilities.t}`
             },
             {
                 name: "AUG",
@@ -297,7 +319,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 28
+                "Damage": 28,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "SG 553",
@@ -307,7 +330,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 30
+                "Damage": 30,
+                "Availability": `${Availabilities.t}`
             }
         
     ],
@@ -320,7 +344,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 30
+                "Damage": 30,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "AWP",
@@ -330,7 +355,8 @@ let weapons = [
                     "CompetitiveMode": [100, currency.USD],
                     "NormalMode": [50, currency.USD]
                 },
-                "Damage": 115
+                "Damage": 115,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "SCAR-20",
@@ -340,7 +366,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 80
+                "Damage": 80,
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "G3SG1",
@@ -350,7 +377,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 80
+                "Damage": 80,
+                "Availability": `${Availabilities.t}`
             }
         
     ],
@@ -363,7 +391,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 32
+                "Damage": 32,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "Negev",
@@ -373,7 +402,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 35
+                "Damage": 35,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             }
         
     ],
@@ -386,7 +416,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": 65
+                "Damage": 65,
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "Light grenade",
@@ -396,7 +427,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": (65 / (50 * 100))
+                "Damage": (65 / (50 * 100)),
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "Smoke grenade",
@@ -406,7 +438,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": (65 / (50 * 100))
+                "Damage": (65 / (50 * 100)),
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
                 name: "Incendiary grenade",
@@ -416,7 +449,8 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": (65 / (100 - 50))
+                "Damage": (65 / (100 - 50)),
+                "Availability": `${Availabilities.ct}`
             },
             {
                 name: "Molotov cocktail",
@@ -426,17 +460,19 @@ let weapons = [
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": (65 / (100 - 50))
+                "Damage": (65 / (100 - 50)),
+                "Availability": `${Availabilities.t}`
             },
             {
-                name: "Decoil",
+                name: "Decoi",
                 Price: [50, currency.USD],
                 "MagazineCapacity": "1",
                 "KillReward": {
                     "CompetitiveMode": [300, currency.USD],
                     "NormalMode": [150, currency.USD]
                 },
-                "Damage": (65 / (100 * 50))
+                "Damage": (65 / (100 * 50)),
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             }
         
     ]
