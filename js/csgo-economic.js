@@ -21,7 +21,7 @@ for (let indx = 0; indx < weapons.length; indx++) {
         let usingInd = [],
             curr = currency.USD;
         usingInd = weapons[indx][indInn];
-        
+
         Info.push({
             name: usingInd.name,
             price: usingInd.Price[0],
@@ -31,7 +31,7 @@ for (let indx = 0; indx < weapons.length; indx++) {
                 normalMode: weapons[indx][indInn].KillReward.NormalMode[0] + curr
             },
             damage: usingInd.Damage,
-            availability: usingInd.
+            availability: usingInd.Availability
         });
     }
     InModifiedWeaponsDetails.push({
@@ -42,19 +42,37 @@ for (let indx = 0; indx < weapons.length; indx++) {
 
 let allWeaponsCategory = [];
 
-for(let ind = 0; ind < examples.length; ind++){
+for (let ind = 0; ind < examples.length; ind++) {
     allWeaponsCategory.push([examples[ind], InModifiedWeaponsDetails[ind].weapon]);
+}
+
+let onlyCounterTerroristsWeapons = [],
+    onlyTerroristsWeapons = [],
+    forBothTeamsWeapons = [];
+
+for (let ind = 0; ind < allWeaponsCategory.length; ind++) {
+
+    for (let indIn = 0; indIn < allWeaponsCategory[ind][1].length; indIn++) {
+
+        if (allWeaponsCategory[ind][1][indIn].availability == Availabilities.ct) {
+            onlyCounterTerroristsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
+        } else if (allWeaponsCategory[ind][1][indIn].availability == Availabilities.t) {
+            onlyTerroristsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
+        } else {
+            forBothTeamsWeapons.push(allWeaponsCategory[ind][1][indIn].name);
+        }
+
+    }
+
 }
 
 const startMoney = 16000;
 let currentMoney = startMoney;
 let selectionWeapon = (InModifiedWeaponsDetails[0].weapon[0]);
 currentMoney -= selectionWeapon.price;
-
+const curr$ = currency.USD;
 
 let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
-
-const curr$ = currency.USD;
 
 startMoneyInfo = (`round start money: ${startMoney + curr$}`);
 selectionWeaponInfo = (`buy weapon: ${selectionWeapon.name}`);
