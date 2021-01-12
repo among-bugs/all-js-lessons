@@ -1,0 +1,24 @@
+{
+  "name": "all_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "todo-list": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camel-coder/all-js-lessons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camel-coder/all-js-lessons/issues"
+  },
+  "homepage": "https://github.com/camel-coder/all-js-lessons#readme",
+  "description": ""
+}
