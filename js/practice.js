@@ -62,6 +62,11 @@ let defaultAnswers = {
     scores: [9.5, 8.0, 9.6, 9.4, 6.5, 4.7, 8.8, 9.9, 7.8, 8.9]
 };
 
+let indexes = ['first', 'second', 'third', 'fourth', 'fifth', 
+                'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
+
+let moviesInformation = [];
+
 for (let indx = 0; indx < 10; indx++){
     let urLastWatchedFilm = prompt(questions[0], defaultAnswers.films[indx]);
     let urScoreForThisFilm = prompt(questions[1], defaultAnswers.scores[indx]);
@@ -73,7 +78,15 @@ for (let indx = 0; indx < 10; indx++){
         alert(`Your answer is empty. Please, try again`);
         indx--;
     }
-    alert(`film: ${urLastWatchedFilm} score: ${urScoreForThisFilm}`);
+      
+    let currentFilmsInformation = 
+    `${indexes[indx]} film: ${urLastWatchedFilm} score: ${urScoreForThisFilm}`;
+    alert(currentFilmsInformation);
+    moviesInformation.push({
+        id: indexes[indx],
+        film: urLastWatchedFilm,
+        score: urScoreForThisFilm
+    });
 }
 
 if (personalMovieDB.count < 10){
