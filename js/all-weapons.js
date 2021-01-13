@@ -101,7 +101,7 @@ let weapons = [
                     "NormalMode": [50, currency.USD]
                 },
                 "Damage": 33,
-                "Availability": `${Availabilities.ct}`
+                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
 
             },
             {
@@ -243,7 +243,7 @@ let weapons = [
                 "Availability": `${Availabilities.t}, ${Availabilities.ct}`
             },
             {
-                name: "PP-19",
+                name: "PP-19 Bizon",
                 Price: [1400, currency.USD],
                 "MagazineCapacity": undefined,
                 "KillReward": {
