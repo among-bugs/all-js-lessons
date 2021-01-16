@@ -74,15 +74,51 @@ for (let ind = 0; ind < allWeaponsCategory.length; ind++) {
 
 }
 
-const startMoney = 16000;
-let currentMoney = startMoney;
-let selectionWeapon = (InModifiedWeaponsDetails[0].weapon[0]);
-currentMoney -= selectionWeapon.price;
+function currentRound(startMoney, category, selectWeapon, teams) {
 
-let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
+    let currentMoney = startMoney;
+    let selectionWeapon = allWeaponsCategory[category][1][selectWeapon];
 
-startMoneyInfo = (`round start money: ${startMoney + curr$}`);
-selectionWeaponInfo = (`buy weapon: ${selectionWeapon.name}`);
-currentMoneyInfo = (`current money: ${currentMoney + curr$}`);
+    if (selectionWeapon.availability == teams  || 
+        selectionWeapon.availability == Availabilities.both) {
 
-let round = (`${startMoneyInfo} ${selectionWeaponInfo} ${currentMoneyInfo}`);
+            if ((currentMoney - selectionWeapon.price) >= 0) {
+                currentMoney = currentMoney - selectionWeapon.price;
+            } else {
+                console.log(`${selectionWeapon.name} бағасы тым қымбат!` +
+                    `сізде бар болғаны ${currentMoney + currency.USD} бар. сізге  жетпейді`);
+            }
+        
+    } else {
+        console.log(`Таңдалған командада ${
+                    selectionWeapon.availability} бұндай мылтық жоқ, өтінемін басқа командадан іздеп көріңіз!`);
+
+    }
+
+    let startMoneyInfo, currentMoneyInfo, selectionWeaponInfo;
+    startMoneyInfo = (`round start money: ${startMoney + curr$}`);
+    selectionWeaponInfo = (`buy weapon: ${selectionWeapon.name}`);
+    currentMoneyInfo = (`current money: ${currentMoney + curr$}`);
+
+    let round = (`${startMoneyInfo} ${selectionWeaponInfo} ${currentMoneyInfo} + ${selectionWeapon.availability}`);
+
+    return round;
+}
+
+function getPathForAllWeapons(category, indexOfWeapons) {
+    let weapon = 1;
+    let checkedAllCategory = allWeaponsCategory[category][weapon][indexOfWeapons];
+
+    return checkedAllCategory;
+}
+
+let allWeaponsCategoryAfter = [];
+
+let showAllWeapons = function () {
+    for (let ind = 0; ind < examples.length; ind++) {
+        for (let indIn = 0; indIn < allWeaponsCategory[ind][1].length; indIn++) {
+            allWeaponsCategoryAfter.push(getPathForAllWeapons(ind, indIn));
+        }
+    }
+    return allWeaponsCategoryAfter;
+};
