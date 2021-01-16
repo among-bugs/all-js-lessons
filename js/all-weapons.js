@@ -6,7 +6,8 @@ const currency = {
 
 const Availabilities = {
     t: "terrorists",
-    ct: "counter terrorists"
+    ct: "counter terrorists",
+    both: "terrorists, counter terrorists"
 };
 
 console.log(currency.USD);
@@ -54,7 +55,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 38,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
 
             },
             {
@@ -66,7 +67,7 @@ let weapons = [
                     "NormalMode": [300, currency.USD]
                 },
                 "Damage": 38,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
 
             },
             {
@@ -101,7 +102,7 @@ let weapons = [
                     "NormalMode": [50, currency.USD]
                 },
                 "Damage": 33,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
 
             },
             {
@@ -113,7 +114,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 73,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "Revolver R8",
@@ -124,7 +125,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 86,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             }
         
     ],
@@ -138,7 +139,7 @@ let weapons = [
                     "NormalMode": [450, currency.USD]
                 },
                 "Damage": 234,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "XM1014",
@@ -149,7 +150,7 @@ let weapons = [
                     "NormalMode": [450, currency.USD]
                 },
                 "Damage": 120,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "MAG-7",
@@ -207,7 +208,7 @@ let weapons = [
                     "NormalMode": [300, currency.USD]
                 },
                 "Damage": 29,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "MP5SD",
@@ -218,7 +219,7 @@ let weapons = [
                     "NormalMode": [300, currency.USD]
                 },
                 "Damage": 27,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "UMP-45",
@@ -229,7 +230,7 @@ let weapons = [
                     "NormalMode": [null, currency.USD]
                 },
                 "Damage": 35,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "P90",
@@ -240,7 +241,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 26,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "PP-19 Bizon",
@@ -251,7 +252,7 @@ let weapons = [
                     "NormalMode": [300, currency.USD]
                 },
                 "Damage": 27,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             }
         
     ],
@@ -345,7 +346,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 30,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "AWP",
@@ -356,7 +357,7 @@ let weapons = [
                     "NormalMode": [50, currency.USD]
                 },
                 "Damage": 115,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "SCAR-20",
@@ -392,7 +393,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 32,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "Negev",
@@ -403,7 +404,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 35,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             }
         
     ],
@@ -417,7 +418,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": 65,
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "Light grenade",
@@ -428,7 +429,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": (65 / (50 * 100)),
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "Smoke grenade",
@@ -439,7 +440,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": (65 / (50 * 100)),
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             },
             {
                 name: "Incendiary grenade",
@@ -472,7 +473,7 @@ let weapons = [
                     "NormalMode": [150, currency.USD]
                 },
                 "Damage": (65 / (100 * 50)),
-                "Availability": `${Availabilities.t}, ${Availabilities.ct}`
+                "Availability": Availabilities.both
             }
         
     ]
