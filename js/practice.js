@@ -174,3 +174,15 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+function checkYourProfile(letsGoToWriteYourGenres) {
+    let yourName = prompt(`Your name?`, '');
+
+    if (yourName == '' || yourName == null) {
+        console.log(`Please, type your name!`);
+    } else {
+        letsGoToWriteYourGenres();
+    }
+}
+
+console.log(checkYourProfile(writeYourGenres));
