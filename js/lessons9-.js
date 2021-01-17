@@ -74,3 +74,25 @@ for (let indx = 0; indx < (currentNumbr + 50); indx++){
     }
     console.log(indx);
 }
+
+// 17. Methods
+
+const str1 = "sultan";
+
+console.log(str1.toLocaleLowerCase());
+
+console.log(str1.indexOf("t"));
+
+console.log(str1.slice(0, 4));
+
+console.log(str1.substring(0, 4));
+
+console.log(str1.substr(0, 6));
+
+const numbr = 26.7;
+
+console.log(`fround:${Math.fround(numbr)}, round: ${Math.round(numbr)}`);
+
+const strToNumbr = "25.06px";
+
+console.log(Math.round(parseFloat(strToNumbr)));
