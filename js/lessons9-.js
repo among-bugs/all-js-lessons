@@ -135,3 +135,35 @@ function pushAllProfilesDetails() {
 }
 
 pushAllProfilesDetails();
+
+function deleteEmailsFromAllProfiles() {
+    for (let int = 0; int < allProfiles.length; int++) {
+        if (allProfiles[int].contact.email != null) {
+            console.log(`emails: ${allProfiles[int].contact.email} has deleted!`);
+            delete allProfiles[int].contact.email;
+        } else {
+            break;
+        }
+    }
+}
+
+deleteEmailsFromAllProfiles();
+
+function getKeysFromAllProfiles() {
+    for (let indx = 0; indx < allProfiles.length; indx++) {
+        for (let keys in allProfiles[indx]) {
+            if (typeof (allProfiles[indx][keys]) === "object") {
+                for (let keysInKeys in allProfiles[indx][keys]) {
+                    console.log(`key: ${keysInKeys}, value: ${allProfiles[indx][keys][keysInKeys]}`);
+                }
+            } else {
+                console.log(`key: ${keys}, value: ${allProfiles[indx][keys]}`);
+            }
+        }
+    }
+}
+
+
+
+// getKeysFromAllProfiles();
+
