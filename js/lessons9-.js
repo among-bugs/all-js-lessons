@@ -169,9 +169,10 @@ function getKeysFromAllProfiles() {
 
 function getAllWeapons() {
     let sc = 1;
-    for (let index = 0; index < InModifiedWeaponsDetails.length; index++) {
-        for (let indexIn = 0; indexIn < InModifiedWeaponsDetails[index].weapon.length; indexIn++) {
-            let shortIndex = InModifiedWeaponsDetails[index].weapon[indexIn];
+    let thisAllWeapons = InModifiedWeaponsDetails;
+    for (let index = 0; index < thisAllWeapons.length; index++) {
+        for (let indexIn = 0; indexIn < thisAllWeapons[index].weapon.length; indexIn++) {
+            let shortIndex = thisAllWeapons[index].weapon[indexIn];
             const {name} = shortIndex; // деструктуризация объектов 
             console.log(name);
             for (let keys in shortIndex) {
