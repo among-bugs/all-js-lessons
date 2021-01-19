@@ -167,3 +167,40 @@ function getKeysFromAllProfiles() {
 
 // getKeysFromAllProfiles();
 
+function getAllWeapons() {
+    let sc = 1;
+    for (let index = 0; index < InModifiedWeaponsDetails.length; index++) {
+        for (let indexIn = 0; indexIn < InModifiedWeaponsDetails[index].weapon.length; indexIn++) {
+            let shortIndex = InModifiedWeaponsDetails[index].weapon[indexIn];
+            const {name} = shortIndex; // деструктуризация объектов 
+            console.log(name);
+            for (let keys in shortIndex) {
+                if (typeof (shortIndex[keys]) === "object") {
+                    for (let keyIn in shortIndex[keys]) {
+                        console.log(`key:${keyIn}, value:${shortIndex[keys][keyIn]}`);
+                    }
+                } else {
+                    console.log(`key:${keys}, value:${shortIndex[keys]}`);
+                }
+            }
+            console.log(`__________________________________________`);
+        }
+    }
+}
+
+function addNewFunctionToWeapons() {
+    let allWeapons = InModifiedWeaponsDetails;
+
+    for (let int = 0; int < allWeapons.length; int++ ) {
+        for (let int2 = 0; int2 < allWeapons[int].weapon.length; int2++ ) {
+            allWeapons[int].weapon[int2] = ({
+                showText: function () {
+                    console.log(`test`);
+                }
+            });
+            console.log(allWeapons[int].weapon[int2].showText());
+        }
+    }
+}
+
+
