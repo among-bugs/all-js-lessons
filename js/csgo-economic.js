@@ -46,6 +46,8 @@ for (let ind = 0; ind < examples.length; ind++) {
     allWeaponsCategory.push([examples[ind], InModifiedWeaponsDetails[ind].weapon]);
 }
 
+
+
 let onlyCounterTerroristsWeapons = [],
     onlyTerroristsWeapons = [],
     forBothTeamsWeapons = [];
@@ -122,3 +124,22 @@ let showAllWeapons = function () {
     }
     return allWeaponsCategoryAfter;
 };
+
+function getAllWeapons() {
+    let sc = 1;
+    for (let index = 0; index < InModifiedWeaponsDetails.length; index++ ) {
+        for (let indexIn = 0; indexIn < InModifiedWeaponsDetails[index].weapon.length; indexIn++ ) {
+           let shortIndex = InModifiedWeaponsDetails[index].weapon[indexIn];
+            for (let keys in shortIndex ) {
+                if (typeof(shortIndex[keys]) === "object") {
+                    for (let keyIn in shortIndex[keys]) {
+                        console.log(`key:${keyIn}, value:${shortIndex[keys][keyIn]}`);
+                    }
+                } else {
+                    console.log(`key:${keys}, value:${shortIndex[keys]}`);
+                }
+            }
+            console.log(`__________________________________________`);
+        }
+    }
+}
