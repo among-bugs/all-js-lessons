@@ -40,8 +40,8 @@ console.log(toCheckAnd || !toCheckOr);
 // 13. Условия в JS
 const Numbr = 1;
 
-switch(Numbr) {
-    case 50: 
+switch (Numbr) {
+    case 50:
         console.log(`${Numbr} is not 50`);
         break;
     case 49:
@@ -50,8 +50,9 @@ switch(Numbr) {
     case 1:
         console.log(`${Numbr} is true`);
         break;
-    default: console.log(`okay!!!`);
-        break;    
+    default:
+        console.log(`okay!!!`);
+        break;
 }
 
 // 14. Циклы
@@ -67,8 +68,8 @@ let currentNumbr = 100;
 //     console.log(currentNumbr++);
 // } while (currentNumbr < 105);
 
-for (let indx = 0; indx < (currentNumbr + 50); indx++){
-    if (indx === 120){
+for (let indx = 0; indx < (currentNumbr + 50); indx++) {
+    if (indx === 120) {
         console.log(`this is favourite numb, ${indx}`);
         continue;
     }
@@ -96,3 +97,41 @@ console.log(`fround:${Math.fround(numbr)}, round: ${Math.round(numbr)}`);
 const strToNumbr = "25.06px";
 
 console.log(Math.round(parseFloat(strToNumbr)));
+
+// 20. Objects
+
+let allProfiles = [];
+
+const Base = {
+    names: ['Sultangali', 'Ayangali', 'Madina', 'Aitkali'],
+    ages: [22, 16, 24, 28],
+    contacts: {
+        phoneNumbers: [87025588547, 87775620058, 87753951700, 87011126274],
+        emails: ['sultanscreed@gmail.com', 'ayangali.zv@gmail.com', 'madin@gmail.com', 'aitokyo@gmail.com']
+    },
+    questions: ['Your name is?', 'Your age?', 'Your phone number?', 'Your email?']
+};
+
+function pushAllProfilesDetails() {
+    for (let index = 0; index < 4; index++) {
+        let pushingName = prompt(Base.questions[0], Base.names[index]),
+            pushingAge = prompt(Base.questions[1], Base.ages[index]),
+            pushingContactPhoneNumber = prompt(Base.questions[2], Base.contacts.phoneNumbers[index]),
+            pushingContactEmail = prompt(Base.questions[3], Base.contacts.emails[index]);
+        if (pushingName == null || pushingAge == null ||
+            pushingContactPhoneNumber == null || pushingContactEmail == null) {
+            index--;
+        } else {
+            allProfiles.push({
+                name: pushingName,
+                age: pushingAge,
+                contact: {
+                    phoneNumber: pushingContactPhoneNumber,
+                    email: pushingContactEmail
+                }
+            });
+        }
+    }
+}
+
+pushAllProfilesDetails();
