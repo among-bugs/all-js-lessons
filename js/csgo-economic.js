@@ -125,3 +125,19 @@ let showAllWeapons = function () {
     return allWeaponsCategoryAfter;
 };
 
+function getOnlyCounterTerroristsWeapons() {
+    let onlyCTWeapons = [];
+    for (let indx = 0; indx < allWeaponsCategory.length; indx++ ) {
+        for (let indy = 0; indy < allWeaponsCategory[indx][1].length; indy++ ) {
+            let shortIndex = allWeaponsCategory[indx][1][indy];
+            let name = shortIndex.name,
+                price = shortIndex.price + currency.USD,
+                availability = shortIndex.availability;
+
+            if (shortIndex.availability == Availabilities.ct ) {
+                onlyCTWeapons.push(`${name}, ${price}, ${availability}`);
+            }
+        }
+    }
+    return onlyCTWeapons;
+}
