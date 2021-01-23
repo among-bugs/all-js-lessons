@@ -475,7 +475,6 @@ let weapons = [
                 "Damage": (65 / (100 * 50)),
                 "Availability": Availabilities.both
             }
-        
     ]
 ];
 
