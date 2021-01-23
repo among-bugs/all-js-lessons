@@ -233,20 +233,33 @@ arr.forEach(function(value, index, thisArray){
     console.log(`${index}-element is '${value}' (${thisArray})`);
 });
 
-function checkSplitMethod() {
-    let arrToCheckSplit = [], allNames;
+
+function checkThreeMethods() {
+    let arrToCheckSplit = [], joinArrElements, sortedElements;
     for (let indx = 0; indx < allProfiles.length; indx++ ) {
-        arrToCheckSplit.push(`${allProfiles[indx].name}, `);
-        allNames = arrToCheckSplit.split(", ");
+        arrToCheckSplit.push(`${allProfiles[indx].name}`);
     }
-    console.log(allNames);
+    sortedElements = arrToCheckSplit.sort(); // firstable we have to sort array elements,
+    //after, we might join all these elements to one string.
+    joinArrElements = sortedElements.join(', ');// like this one
+    return console.log(joinArrElements);
 }
 
 
-showArrayDirs(arr);
+pushAllProfilesDetails();
+checkThreeMethods();
 
-function showArrayDirs(thisArray) {
-    console.dir(thisArray);
-}
+let str = "asd, dsa, qwer, asd, ddd, aas, ass, boob";
+
+let allNames = str.split(", ");
+
+
+
+
+// showArrayDirs(arr);
+
+// function showArrayDirs(thisArray) {
+//     console.dir(thisArray);
+// }
 
 
