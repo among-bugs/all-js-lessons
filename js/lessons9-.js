@@ -246,14 +246,25 @@ function checkThreeMethods() {
 }
 
 
-pushAllProfilesDetails();
-checkThreeMethods();
+// pushAllProfilesDetails();
+// checkThreeMethods();
 
 let str = "asd, dsa, qwer, asd, ddd, aas, ass, boob";
 
 let allNames = str.split(", ");
 
+function forPractice() {
+    
+    let profiles = [], sortedProfiles, toJoin = [];
+    
+        for (let indy = 0; indy < Base.questions.length; indy++ ) {
 
+                profiles[indy] = prompt(Base.questions[0], '');
+        }
+        sortedProfiles = profiles.sort();
+        toJoin = sortedProfiles.join();
+    return console.log(toJoin);
+}
 
 
 // showArrayDirs(arr);
