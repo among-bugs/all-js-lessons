@@ -134,7 +134,7 @@ function pushAllProfilesDetails() {
     }
 }
 
-pushAllProfilesDetails();
+// pushAllProfilesDetails();
 
 function deleteEmailsFromAllProfiles() {
     for (let int = 0; int < allProfiles.length; int++) {
@@ -147,7 +147,7 @@ function deleteEmailsFromAllProfiles() {
     }
 }
 
-deleteEmailsFromAllProfiles();
+// deleteEmailsFromAllProfiles();
 
 function getKeysFromAllProfiles() {
     for (let indx = 0; indx < allProfiles.length; indx++) {
@@ -204,4 +204,38 @@ function addNewFunctionToWeapons() {
     }
 }
 
+// 21. Arrays
+function dropLastElementFromArrays() {
+    let pushToName = [];
+    for (let ind = 0; ind < allProfiles.length; ind++ ) {
+        pushToName.push('asd');
+        allProfiles[ind].name = pushToName[ind];
+        console.log(allProfiles[ind]);
+    }
+}
+
+const arr = [0, 2, 4, 6, 7];
+
+function addElementsToArr(thisArrayToAdd) {
+    for ( let ind = 0; ind < 20; ind++ ) {
+        thisArrayToAdd.push(ind);
+    }
+}
+
+console.log(addElementsToArr(arr));
+
+console.log(arr);
+
+function dropAllDataFromArr(thisArrToDrop) {
+    for (let ind = thisArrToDrop.length; ind > 0; ind-- ){
+        thisArrToDrop.pop();
+    }
+}
+
+
+showArrayDirs(arr);
+
+function showArrayDirs(thisArray) {
+    console.log(thisArray);
+}
 
