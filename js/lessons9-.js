@@ -205,26 +205,15 @@ function addNewFunctionToWeapons() {
 }
 
 // 21. Arrays
-function dropLastElementFromArrays() {
-    let pushToName = [];
-    for (let ind = 0; ind < allProfiles.length; ind++ ) {
-        pushToName.push('asd');
-        allProfiles[ind].name = pushToName[ind];
-        console.log(allProfiles[ind]);
-    }
-}
 
-const arr = [0, 2, 4, 6, 7];
+const arr = [];
 
 function addElementsToArr(thisArrayToAdd) {
-    for ( let ind = 0; ind < 20; ind++ ) {
+    for ( let ind = 0; ind < 10; ind++ ) {
         thisArrayToAdd.push(ind);
     }
 }
 
-console.log(addElementsToArr(arr));
-
-console.log(arr);
 
 function dropAllDataFromArr(thisArrToDrop) {
     for (let ind = thisArrToDrop.length; ind > 0; ind-- ){
@@ -232,10 +221,32 @@ function dropAllDataFromArr(thisArrToDrop) {
     }
 }
 
+function showWithCiclesFromArr(selectedArr) {
+    for (let ind = 0; ind < selectedArr.length; ind++ ) {
+        console.log(selectedArr[ind]);
+    }
+}
+
+addElementsToArr(arr);
+
+arr.forEach(function(value, index, thisArray){
+    console.log(`${index}-element is '${value}' (${thisArray})`);
+});
+
+function checkSplitMethod() {
+    let arrToCheckSplit = [], allNames;
+    for (let indx = 0; indx < allProfiles.length; indx++ ) {
+        arrToCheckSplit.push(`${allProfiles[indx].name}, `);
+        allNames = arrToCheckSplit.split(", ");
+    }
+    console.log(allNames);
+}
+
 
 showArrayDirs(arr);
 
 function showArrayDirs(thisArray) {
-    console.log(thisArray);
+    console.dir(thisArray);
 }
+
 
