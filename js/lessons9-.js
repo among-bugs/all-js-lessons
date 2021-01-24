@@ -269,8 +269,111 @@ function forPractice() {
 
 // showArrayDirs(arr);
 
-// function showArrayDirs(thisArray) {
-//     console.dir(thisArray);
-// }
+// function showArrayDirs(thisArray) {copiedObj[key] = main[key];
+//22.  Передача по ссылке или по значени
+
+const firstObj = {
+    a: 15,
+    b: 20
+};
+
+// const copiedObj = firstObj;
+
+// copiedObj.a = 20;
+
+// console.log(copiedObj);
+// console.log(firstObj);
+
+function copy(main) {
+    let copiedObj = {};
+    for(let key in main) {
+        // if (typeof(main[key]) === "object") {
+        //     for (let keyIn in main[key]) {
+        //         copiedObj[key][keyIn] = main[key][keyIn];
+        //     }
+        // } else {
+            copiedObj[key] = main[key];
+    }
+    return copiedObj;
+}
+
+const mainObj = {
+    a: 5,
+    b: 3,
+    c: {
+        ca: 6,
+        cb: 7
+    }
+};
+
+const copiedObj = copy(mainObj);
+
+console.log(mainObj);
+console.log(copiedObj);
+
+copiedObj.a = 256;
+mainObj.c.ca = 254;
+console.log(mainObj);
+console.log(copiedObj);
+
+const addingObj = {
+    e: 12,
+    f: 25,
+    g: 45,
+    h: `last`
+};
+
+// const modifiedMainObj = Object.assign(mainObj, addingObj);
+
+// console.log(modifiedMainObj);
+
+const clone = Object.assign({}, addingObj);
+clone.e++;
+
+console.log(addingObj);
+console.log(clone);
+
+const baseArr = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`];
+
+function addElementsToFirstArr(thisFirstArr) {
+    for (let  ind = 0; ind < baseArr.length; ind++ ) {
+        thisFirstArr[ind] = baseArr[ind] + ind;
+    }
+    return thisFirstArr;
+}
+let firstArr = [];
+addElementsToFirstArr(firstArr);
+
+let lastArr = firstArr.slice();
+
+function addElementsToArrBack(thisLastArr){
+    let reversedBaseArr = baseArr.reverse();//to reverse all elements from last array
+    for (let ind = 0; ind < thisLastArr.length; ind++ ) {
+        thisLastArr[ind] += reversedBaseArr[ind];
+    }
+    return thisLastArr;
+}
+
+console.log(firstArr);
+addElementsToArrBack(lastArr);
+console.log(lastArr);
+
+let all_ = [`first`, `last`, `asd`, `qwerty`];
 
 
+function showLog(first, last, asd, qwerty) {
+    console.log(`first:${first}, last:${last}, asd:${asd}, qwerty:${qwerty}`);
+}
+
+console.log(showLog(...all_));//Spread operator
+
+const newCopyAll_ = [...all_];//get copy with spread operator
+
+let thiss = function() {
+    for (let key of newCopyAll_){
+        console.log(key);
+    }
+};
+console.log(thiss());
+
+//////////////////////
