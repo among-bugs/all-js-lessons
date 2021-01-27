@@ -141,3 +141,41 @@ function getOnlyCounterTerroristsWeapons() {
     }
     return onlyCTWeapons;
 }
+let pistols = [],
+shotguns = [],
+submachineGuns = [],
+assaultRifles = [],
+sniperRifles = [],
+machineGuns = [],
+grenades = [];
+function pointAllWeaponCategory() {
+
+    for (let ind = 0; ind < allWeaponsCategory.length; ind++ ) {
+        switch (allWeaponsCategory[ind][0]) {
+            case "pistols": 
+                pistols = allWeaponsCategory[ind][1];
+                break;
+            case "shotguns":
+                shotguns = allWeaponsCategory[ind][1];
+                break;
+            case "submachineGuns":
+                submachineGuns = allWeaponsCategory[ind][1];
+                break;
+            case "assaultRifles":
+                assaultRifles = allWeaponsCategory[ind][1];
+                break;
+            case "sniperRifles":
+                sniperRifles = allWeaponsCategory[ind][1];
+                break;
+            case "machineGuns":
+                machineGuns = allWeaponsCategory[ind][1];
+                break;
+            case "grenades":
+                grenades = allWeaponsCategory[ind][1];
+                break;
+        }
+    }
+}
+
+pointAllWeaponCategory();
+
