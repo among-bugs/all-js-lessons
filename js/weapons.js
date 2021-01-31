@@ -136,7 +136,11 @@ Object.setPrototypeOf(MP7, weapon);
 MP7.Name = "MP7";
 MP7.Price = setPrice(1500);
 MP7.MagazineCapacity = "30/120";
-MP7.KillReward.CompetitiveMode = setPrice(700);
+MP7.KillReward.CompetitiveMode = setPrice(600);
+MP7.KillReward.NormalMode = setPrice(300);
+MP7.Damage = 29;
+MP7.Availability = both;
+
 
 
 
