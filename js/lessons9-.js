@@ -377,3 +377,17 @@ let thiss = function() {
 console.log(thiss());
 
 //////////////////////
+//26. 
+const thisStr = '26';
+console.log(typeof(Number(thisStr)));
+console.log(typeof(+thisStr));
+
+function switcher(moment) {
+    if (moment) {
+        console.log(`working...`);
+    }
+}
+
+// switcher(null);
+
+switcher(1);
