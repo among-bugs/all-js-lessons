@@ -391,3 +391,23 @@ function switcher(moment) {
 // switcher(null);
 
 switcher(1);
+
+///28. 
+
+// const firstButton = document.getElementById('firstButton');
+
+// console.log(firstButton);
+
+const allButtons = document.querySelectorAll('button');
+allButtons.forEach(function(item, i) {
+    console.log(i + 1, item);
+});
+// document.getElementsByTagName('button');
+// console.log(allButtons[0]);
+// console.log(showAllButtonElements(allButtons));
+
+// function showAllButtonElements(thisAllButtons) {
+//     for (let ind = 0; ind < thisAllButtons.length; ind++ ) {
+//         console.log(thisAllButtons[ind]);
+//     }       
+// }
