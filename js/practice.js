@@ -135,7 +135,7 @@ let personalMovieDB = {
     },
     showMyDB: function(isHidden) {
         if (!isHidden) {
-            console.log(personalMovieDB.movies);
+            console.log(personalMovieDB.movies, personalMovieDB.currClientSaysHello());
         }
     },
     toggleVisibleMyDB: function() {
@@ -163,6 +163,10 @@ let personalMovieDB = {
 
         //.split();
         //.sort();
+    },
+    currClientSaysHello: function() {
+        this.toggleVisibleMyDB();
+        console.log(`HELLO WORLD!`);
     }
 };
 
