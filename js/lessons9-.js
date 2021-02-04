@@ -402,6 +402,7 @@ const allButtons = document.querySelectorAll('button');
 allButtons.forEach(function(item, i) {
     console.log(i + 1, item);
 });
+
 // document.getElementsByTagName('button');
 // console.log(allButtons[0]);
 // console.log(showAllButtonElements(allButtons));
@@ -411,3 +412,27 @@ allButtons.forEach(function(item, i) {
 //         console.log(thisAllButtons[ind]);
 //     }       
 // }
+
+const colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info'];
+
+function setColorsForAllButtons() {
+    allButtons.forEach((item, i) => {
+        item.type = "button";
+        // item.className = `btn btn-outline-${colors[i]}`;
+        item.id = `button${i+1}`;
+        item.style.width = '50px';
+        item.style.height = '50px';
+        // let numberIndex = 
+        // document.getElementById(item.id).innerHTML = `${i+1}`;
+    });
+    let button14 = document.getElementById('button14');
+    button14.style.width = '104px';
+    button14.style.height = '50px';  
+}
+
+setColorsForAllButtons();
+
+
+
+
+
