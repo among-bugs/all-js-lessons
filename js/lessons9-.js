@@ -2,8 +2,8 @@
 
 // 9.Операторы в JS
 const all = `arr` + ` - object`;
-const intPlusStr = 5 + +`5`;
-console.log(all, `and`, typeof (intPlusStr), intPlusStr);
+// const intPlusStr = 5 + +`5`;
+// console.log(all, `and`, typeof (intPlusStr), intPlusStr);
 
 // increments decrements
 
@@ -173,7 +173,9 @@ function getAllWeapons() {
     for (let index = 0; index < thisAllWeapons.length; index++) {
         for (let indexIn = 0; indexIn < thisAllWeapons[index].weapon.length; indexIn++) {
             let shortIndex = thisAllWeapons[index].weapon[indexIn];
-            const {name} = shortIndex; // деструктуризация объектов 
+            const {
+                name
+            } = shortIndex; // деструктуризация объектов 
             console.log(name);
             for (let keys in shortIndex) {
                 if (typeof (shortIndex[keys]) === "object") {
@@ -192,8 +194,8 @@ function getAllWeapons() {
 function addNewFunctionToWeapons() {
     let allWeapons = InModifiedWeaponsDetails;
 
-    for (let int = 0; int < allWeapons.length; int++ ) {
-        for (let int2 = 0; int2 < allWeapons[int].weapon.length; int2++ ) {
+    for (let int = 0; int < allWeapons.length; int++) {
+        for (let int2 = 0; int2 < allWeapons[int].weapon.length; int2++) {
             allWeapons[int].weapon[int2] = ({
                 showText: function () {
                     console.log(`test`);
@@ -209,39 +211,40 @@ function addNewFunctionToWeapons() {
 const arr = [];
 
 function addElementsToArr(thisArrayToAdd) {
-    for ( let ind = 0; ind < 10; ind++ ) {
+    for (let ind = 0; ind < 10; ind++) {
         thisArrayToAdd.push(ind);
     }
 }
 
 
 function dropAllDataFromArr(thisArrToDrop) {
-    for (let ind = thisArrToDrop.length; ind > 0; ind-- ){
+    for (let ind = thisArrToDrop.length; ind > 0; ind--) {
         thisArrToDrop.pop();
     }
 }
 
 function showWithCiclesFromArr(selectedArr) {
-    for (let ind = 0; ind < selectedArr.length; ind++ ) {
+    for (let ind = 0; ind < selectedArr.length; ind++) {
         console.log(selectedArr[ind]);
     }
 }
 
 addElementsToArr(arr);
 
-arr.forEach(function(value, index, thisArray){
+arr.forEach(function (value, index, thisArray) {
     console.log(`${index}-element is '${value}' (${thisArray})`);
 });
 
 
 function checkThreeMethods() {
-    let arrToCheckSplit = [], joinArrElements, sortedElements;
-    for (let indx = 0; indx < allProfiles.length; indx++ ) {
+    let arrToCheckSplit = [],
+        joinArrElements, sortedElements;
+    for (let indx = 0; indx < allProfiles.length; indx++) {
         arrToCheckSplit.push(`${allProfiles[indx].name}`);
     }
     sortedElements = arrToCheckSplit.sort(); // firstable we have to sort array elements,
     //after, we might join all these elements to one string.
-    joinArrElements = sortedElements.join(', ');// like this one
+    joinArrElements = sortedElements.join(', '); // like this one
     return console.log(joinArrElements);
 }
 
@@ -254,15 +257,16 @@ let str = "asd, dsa, qwer, asd, ddd, aas, ass, boob";
 let allNames = str.split(", ");
 
 function forPractice() {
-    
-    let profiles = [], sortedProfiles, toJoin = [];
-    
-        for (let indy = 0; indy < Base.questions.length; indy++ ) {
 
-                profiles[indy] = prompt(Base.questions[0], '');
-        }
-        sortedProfiles = profiles.sort();
-        toJoin = sortedProfiles.join();
+    let profiles = [],
+        sortedProfiles, toJoin = [];
+
+    for (let indy = 0; indy < Base.questions.length; indy++) {
+
+        profiles[indy] = prompt(Base.questions[0], '');
+    }
+    sortedProfiles = profiles.sort();
+    toJoin = sortedProfiles.join();
     return console.log(toJoin);
 }
 
@@ -286,13 +290,13 @@ const firstObj = {
 
 function copy(main) {
     let copiedObj = {};
-    for(let key in main) {
+    for (let key in main) {
         // if (typeof(main[key]) === "object") {
         //     for (let keyIn in main[key]) {
         //         copiedObj[key][keyIn] = main[key][keyIn];
         //     }
         // } else {
-            copiedObj[key] = main[key];
+        copiedObj[key] = main[key];
     }
     return copiedObj;
 }
@@ -336,7 +340,7 @@ console.log(clone);
 const baseArr = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`];
 
 function addElementsToFirstArr(thisFirstArr) {
-    for (let  ind = 0; ind < baseArr.length; ind++ ) {
+    for (let ind = 0; ind < baseArr.length; ind++) {
         thisFirstArr[ind] = baseArr[ind] + ind;
     }
     return thisFirstArr;
@@ -346,9 +350,9 @@ addElementsToFirstArr(firstArr);
 
 let lastArr = firstArr.slice();
 
-function addElementsToArrBack(thisLastArr){
-    let reversedBaseArr = baseArr.reverse();//to reverse all elements from last array
-    for (let ind = 0; ind < thisLastArr.length; ind++ ) {
+function addElementsToArrBack(thisLastArr) {
+    let reversedBaseArr = baseArr.reverse(); //to reverse all elements from last array
+    for (let ind = 0; ind < thisLastArr.length; ind++) {
         thisLastArr[ind] += reversedBaseArr[ind];
     }
     return thisLastArr;
@@ -365,12 +369,12 @@ function showLog(first, last, asd, qwerty) {
     console.log(`first:${first}, last:${last}, asd:${asd}, qwerty:${qwerty}`);
 }
 
-console.log(showLog(...all_));//Spread operator
+console.log(showLog(...all_)); //Spread operator
 
-const newCopyAll_ = [...all_];//get copy with spread operator
+const newCopyAll_ = [...all_]; //get copy with spread operator
 
-let thiss = function() {
-    for (let key of newCopyAll_){
+let thiss = function () {
+    for (let key of newCopyAll_) {
         console.log(key);
     }
 };
@@ -379,8 +383,8 @@ console.log(thiss());
 //////////////////////
 //26. 
 const thisStr = '26';
-console.log(typeof(Number(thisStr)));
-console.log(typeof(+thisStr));
+console.log(typeof (Number(thisStr)));
+console.log(typeof (+thisStr));
 
 function switcher(moment) {
     if (moment) {
@@ -399,7 +403,7 @@ switcher(1);
 // console.log(firstButton);
 
 const allButtons = document.querySelectorAll('button');
-allButtons.forEach(function(item, i) {
+allButtons.forEach(function (item, i) {
     console.log(i + 1, item);
 });
 
@@ -419,20 +423,58 @@ function setColorsForAllButtons() {
     allButtons.forEach((item, i) => {
         item.type = "button";
         // item.className = `btn btn-outline-${colors[i]}`;
-        item.id = `button${i+1}`;
+        item.id = `button${i}`;
         item.style.width = '50px';
         item.style.height = '50px';
         // let numberIndex = 
         // document.getElementById(item.id).innerHTML = `${i+1}`;
     });
-    let button14 = document.getElementById('button14');
-    button14.style.width = '104px';
-    button14.style.height = '50px';  
+    let button13 = document.getElementById('button13');
+    button13.style.width = '104px';
+    button13.style.height = '50px';
 }
-
 setColorsForAllButtons();
 
 
 
 
+const sultan = document.createElement('sultan');
+// sultan.classList.add('black');
+sultan.className = "black";
+document.body.append(sultan);
+// document.body.prepend(sultan);
 
+allButtons[14].after(sultan);
+
+sultan.textContent = "I'm Sultan";
+sultan.style.fontSize = "24px";
+sultan.style.fontStyle = "italic";
+
+sultan.insertAdjacentHTML('beforebegin', '<br><h2>HELLO</h2>');
+
+
+
+
+// number1.onclick = function() {
+// alert(parseInt(number1.textContent));
+// };
+
+
+const color = ['white', 'black', 'red', 'blue', 'green', 'yellow', 'brown'];
+
+function hoveMouse() {
+    allButtons.forEach((item, i) => {
+        let thisnumb = parseInt(allButtons[i].textContent);
+        item.addEventListener('mouseenter', function () {
+            item.style.backgroundColor = `${color[Math.floor(Math.random() * 7)]}`;
+            console.log(++thisnumb);
+        });
+    });
+}
+
+hoveMouse();
+// number1.addEventListener('click', function() {
+//     alert(thisnumb++);
+// });
+
+// allButtons[8].addEventListener('mouseenter', hoveMouse);
