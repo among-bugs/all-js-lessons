@@ -417,27 +417,6 @@ allButtons.forEach(function (item, i) {
 //     }       
 // }
 
-const colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info'];
-
-function setColorsForAllButtons() {
-    allButtons.forEach((item, i) => {
-        item.type = "button";
-        // item.className = `btn btn-outline-${colors[i]}`;
-        item.id = `button${i}`;
-        item.style.width = '50px';
-        item.style.height = '50px';
-        // let numberIndex = 
-        // document.getElementById(item.id).innerHTML = `${i+1}`;
-    });
-    let button13 = document.getElementById('button13');
-    button13.style.width = '104px';
-    button13.style.height = '50px';
-}
-setColorsForAllButtons();
-
-
-
-
 const sultan = document.createElement('sultan');
 // sultan.classList.add('black');
 sultan.className = "black";
@@ -453,26 +432,49 @@ sultan.style.fontStyle = "italic";
 sultan.insertAdjacentHTML('beforebegin', '<br><h2>HELLO</h2>');
 
 
+const colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info'];
 
-
+function setColorsForAllButtons() {
+    allButtons.forEach((item, i) => {
+        item.type = "button";
+        item.className = `btn btn-outline-${colors[Math.floor(Math.random() * 6)]}`;
+        item.id = `button${i}`;
+        item.style.width = '50px';
+        item.style.height = '50px';
+        // let numberIndex = 
+        // document.getElementById(item.id).innerHTML = `${i+1}`;
+    });
+    let button13 = document.getElementById('button13');
+    button13.style.width = '104px';
+    button13.style.height = '50px';
+}
+// setColorsForAllButtons();
 // number1.onclick = function() {
 // alert(parseInt(number1.textContent));
 // };
 
-
 const color = ['white', 'black', 'red', 'blue', 'green', 'yellow', 'brown'];
 
-function hoveMouse() {
+function hoveMouse(SetColorClassForAllBtns) {
+    SetColorClassForAllBtns();
     allButtons.forEach((item, i) => {
         let thisnumb = parseInt(allButtons[i].textContent);
-        item.addEventListener('mouseenter', function () {
-            item.style.backgroundColor = `${color[Math.floor(Math.random() * 7)]}`;
-            console.log(++thisnumb);
+        item.addEventListener('mouseenter', function (thisEvent) { // .target used only with event!!!
+            item.className = `btn btn-outline-${colors[Math.floor(Math.random() * 6)]}`;
+            console.log(`id = ${item.id},  text content = ${
+                thisEvent.target.textContent}, className = ${
+                    thisEvent.target.className}`);
+        });
+        item.addEventListener('click', (thisEventToClick) => {
+            console.log(thisEventToClick.target.id + ' is clicked!');
+            // document.querySelector('input').value = `${parseInt(thisEventToClick.target.textContent)}`;
         });
     });
 }
 
-hoveMouse();
+hoveMouse(setColorsForAllButtons);
+
+
 // number1.addEventListener('click', function() {
 //     alert(thisnumb++);
 // });
